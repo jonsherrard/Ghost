@@ -1452,6 +1452,17 @@
     "@sentry/utils" "6.19.3"
     tslib "^1.9.3"
 
+"@sentry/core@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-6.19.4.tgz#832d65ae32b4e2a63b9eccd6732b6dd6461620ae"
+  integrity sha512-LIUVqLyt9Ugj6xyQE9itrCmhFs1iQ2FOgVkmpsXu+UVwFY4xccT5k/0PAHa7sik5CeH6x7p8oRCrYgrwbktraQ==
+  dependencies:
+    "@sentry/hub" "6.19.4"
+    "@sentry/minimal" "6.19.4"
+    "@sentry/types" "6.19.4"
+    "@sentry/utils" "6.19.4"
+    tslib "^1.9.3"
+
 "@sentry/hub@6.19.3":
   version "6.19.3"
   resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-6.19.3.tgz#d555c83404f19ac9b68f336b051b8e7a9d75feb0"
@@ -1461,6 +1472,15 @@
     "@sentry/utils" "6.19.3"
     tslib "^1.9.3"
 
+"@sentry/hub@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-6.19.4.tgz#81aeadceddcddc36fb4f5bb40cf6900f79e3e111"
+  integrity sha512-Lc9ZpKk9f8DBFvl7hm4wYvcuuobAee3X+M1eCMQPzYuk4k0mHThPv/d3GJW6Jo1IBxMbM+x3ONuf9myeJ/4H6g==
+  dependencies:
+    "@sentry/types" "6.19.4"
+    "@sentry/utils" "6.19.4"
+    tslib "^1.9.3"
+
 "@sentry/minimal@6.19.3":
   version "6.19.3"
   resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-6.19.3.tgz#b9b7f0d7f0cd2341b243318668ac01458f9d7889"
@@ -1468,6 +1488,15 @@
   dependencies:
     "@sentry/hub" "6.19.3"
     "@sentry/types" "6.19.3"
+    tslib "^1.9.3"
+
+"@sentry/minimal@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-6.19.4.tgz#c98e5405eeaac1b4f6b6fdbc36abc3cf2c09a4ac"
+  integrity sha512-23Xwt5XoSEfswTWUJRofqtDU30bz+wzv5VLQlUsA65CD8kEDoajVFco9wnIxbauhb3xaU7+jhbyNHWO75mHnTQ==
+  dependencies:
+    "@sentry/hub" "6.19.4"
+    "@sentry/types" "6.19.4"
     tslib "^1.9.3"
 
 "@sentry/node@6.19.3":
@@ -1484,10 +1513,29 @@
     lru_map "^0.3.3"
     tslib "^1.9.3"
 
+"@sentry/node@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-6.19.4.tgz#b0c4971e0e416a7b03022eab1bac3f08923bac54"
+  integrity sha512-PP3xXqZq5Mt/f+j6OFHgl9Uu0oXVB9Hw9MK9SDcn7klIRwCBZpA14WA+NLVrEzBxA0baLE5sToeqmxjnCcCfpw==
+  dependencies:
+    "@sentry/core" "6.19.4"
+    "@sentry/hub" "6.19.4"
+    "@sentry/types" "6.19.4"
+    "@sentry/utils" "6.19.4"
+    cookie "^0.4.1"
+    https-proxy-agent "^5.0.0"
+    lru_map "^0.3.3"
+    tslib "^1.9.3"
+
 "@sentry/types@6.19.3":
   version "6.19.3"
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.19.3.tgz#94b19da68d4d23561efb1014f72968bcea85cd0c"
   integrity sha512-jHhqxp8MIWSfOc3krorirTGKTEaSFO6XrAvi+2AZhr6gvOChwOgzgrN2ZqesJcZmgCsqWV21u3usSwYeRrjOJA==
+
+"@sentry/types@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.19.4.tgz#4e13269daaba2edfeaa4b18a5a14fa8f4d7a85a8"
+  integrity sha512-fzLiQPrjJQ8HgFgA2VqnpLiEOrTJ2ItRY8RY7Cn4038HACoYWYDjrkdVJQBq6IyrxxkgWOSLZXnv85uozBQC+g==
 
 "@sentry/utils@6.19.3":
   version "6.19.3"
@@ -1495,6 +1543,14 @@
   integrity sha512-GdC9B/FK7qd0zItY43135bYbhuVSawE18bIrQDNuno8gTpDJ5OgShpTN9zR53AmMh16/lwKNnV3ZZjlpKcxuNw==
   dependencies:
     "@sentry/types" "6.19.3"
+    tslib "^1.9.3"
+
+"@sentry/utils@6.19.4":
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-6.19.4.tgz#a104e7e9a21555190da68dbbfb925f887423ef85"
+  integrity sha512-f73K3NCX22KT8CVgIiRaaozIReSX5+LhY7Q4C429DZlfVAgOYw0a+kTFrHTNKGLR4II8M8ECjUsL/6O/BdPSFg==
+  dependencies:
+    "@sentry/types" "6.19.4"
     tslib "^1.9.3"
 
 "@simple-dom/document@^1.4.0":
@@ -1803,15 +1859,6 @@
     "@tryghost/debug" "^0.1.9"
     lodash "^4.17.20"
 
-"@tryghost/errors@1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-1.2.5.tgz#e3dd6a462364f899e5267e282fe690ecfbdb4ea2"
-  integrity sha512-6lsnonu7XI556Sg8j8Svlmaoen6DVVnRch3sPFu2Ugohbprzz3eQiJzNXXXaeIRgwBkTcSPHErYNMIf3fiI5Aw==
-  dependencies:
-    lodash "^4.17.21"
-    utils-copy-error "1.0.1"
-    uuid "^8.3.2"
-
 "@tryghost/errors@1.2.7":
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-1.2.7.tgz#f2da9deadb6139167a9e967e1212a66064c5abce"
@@ -1821,7 +1868,7 @@
     utils-copy-error "^1.0.1"
     uuid "^8.3.2"
 
-"@tryghost/errors@1.2.8", "@tryghost/errors@^1.0.0", "@tryghost/errors@^1.1.0", "@tryghost/errors@^1.1.1", "@tryghost/errors@^1.2.1", "@tryghost/errors@^1.2.3", "@tryghost/errors@^1.2.7":
+"@tryghost/errors@1.2.8", "@tryghost/errors@^1.0.0", "@tryghost/errors@^1.1.0", "@tryghost/errors@^1.1.1", "@tryghost/errors@^1.2.1", "@tryghost/errors@^1.2.3", "@tryghost/errors@^1.2.5", "@tryghost/errors@^1.2.7":
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-1.2.8.tgz#b4ba1c31831216222be332ee7a37d9c4a376ac2a"
   integrity sha512-O8CUS4SHsBYFc6/7yUDJ5yk0vhcdzPxFiISgrFhzptOd79ZdXwk9c8Pz5uSDUXPaCqKaWMYLTjSof30IxVvvAA==
@@ -2109,7 +2156,7 @@
     jsonwebtoken "^8.5.1"
     lodash "^4.17.11"
 
-"@tryghost/members-stripe-service@0.9.4":
+"@tryghost/members-stripe-service@0.9.4", "@tryghost/members-stripe-service@^0.9.2":
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/@tryghost/members-stripe-service/-/members-stripe-service-0.9.4.tgz#2e07cfa31dddba1d2bdde2d6b7449bc2c4bc6118"
   integrity sha512-22e7IlNx3D49YK4bdi3wknQ0Tz1nW9zqpq4MIlbLYjGeC8zBR1v1LSMG7NyQR8chErgp8u51xnC6YyQgDd9iAw==
@@ -2117,20 +2164,6 @@
     "@tryghost/debug" "^0.1.4"
     "@tryghost/domain-events" "^0.1.9"
     "@tryghost/errors" "^1.2.5"
-    "@tryghost/logging" "^2.0.5"
-    "@tryghost/member-events" "^0.4.1"
-    leaky-bucket "^2.2.0"
-    lodash "^4.17.21"
-    stripe "^8.174.0"
-
-"@tryghost/members-stripe-service@^0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@tryghost/members-stripe-service/-/members-stripe-service-0.9.2.tgz#c5e2a9d6410a6c66dfe35a67d90fa03ba44b58f6"
-  integrity sha512-wmx4Q19PGN0DxMfgbuH3whgeq+t5hggPtvLpxSBUbuu30kSvZgFqJwse9GGU7DkaD3WaMqDa57F5vrHRd8IEjA==
-  dependencies:
-    "@tryghost/debug" "^0.1.4"
-    "@tryghost/domain-events" "^0.1.9"
-    "@tryghost/errors" "1.2.5"
     "@tryghost/logging" "^2.0.5"
     "@tryghost/member-events" "^0.4.1"
     leaky-bucket "^2.2.0"
@@ -12100,7 +12133,7 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-utils-copy-error@1.0.1, utils-copy-error@^1.0.0, utils-copy-error@^1.0.1:
+utils-copy-error@^1.0.0, utils-copy-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-copy-error/-/utils-copy-error-1.0.1.tgz#791de393c0f09890afd59f3cbea635f079a94fa5"
   integrity sha1-eR3jk8DwmJCv1Z88vqY18HmpT6U=
