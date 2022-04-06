@@ -215,6 +215,7 @@ describe('Posts API', function () {
             .query({source: 'html'})
             .send({posts: [post]})
             .expect(201);
+
         const reqTwo = request
             .post(localUtils.API.getApiQuery('posts'))
             .set('Origin', config.get('url'))

@@ -6,7 +6,8 @@ const allowedIncludes = ['tags', 'authors', 'authors.roles', 'email', 'tiers'];
 const unsafeAttrs = ['status', 'authors', 'visibility'];
 
 const messages = {
-    postNotFound: 'Post not found.'
+    postNotFound: 'Post not found.',
+    postAlreadyExists: 'Post is a duplicate.'
 };
 
 const postsService = getPostServiceInstance('canary');
@@ -117,6 +118,11 @@ module.exports = {
                     }
 
                     return model;
+                })
+                .catch((err) => {
+                    if (err.code === 'ER_DUP_ENTRY') {
+                        throw new errors.ValidationError({message: tpl(messages.postAlreadyExists)});
+                    }
                 });
         }
     },
