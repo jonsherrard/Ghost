@@ -202,6 +202,28 @@ describe('Posts API', function () {
         localUtils.API.checkResponse(jsonResponse.posts[0].email, 'email');
     });
 
+    it('Errors on duplicate post', async function () {
+        const post = {
+            html: '<p>Hello World</p>', 
+            status: 'draft', 
+            title: 'My Title'
+        };
+
+        const reqOne = request
+            .post(localUtils.API.getApiQuery('posts'))
+            .set('Origin', config.get('url'))
+            .query({source: 'html'})
+            .send({posts: [post]})
+            .expect(201);
+        const reqTwo = request
+            .post(localUtils.API.getApiQuery('posts'))
+            .set('Origin', config.get('url'))
+            .query({source: 'html'})
+            .send({posts: [post]})
+            .expect(422);
+        await Promise.all([reqOne, reqTwo]);
+    });
+
     it('Can add a post', async function () {
         const post = {
             title: 'My post',
