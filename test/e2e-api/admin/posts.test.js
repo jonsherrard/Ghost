@@ -217,17 +217,16 @@ describe('Posts API', function () {
             .post(localUtils.API.getApiQuery('posts'))
             .set('Origin', config.get('url'))
             .query({source: 'html'})
-            .send({posts: [post]})
-            .expect(201);
+            .send({posts: [post]});
 
         const reqTwo = request
             .post(localUtils.API.getApiQuery('posts'))
             .set('Origin', config.get('url'))
             .query({source: 'html'})
-            .send({posts: [post]})
-            .expect(422);
+            .send({posts: [post]});
             
-        await Promise.all([reqOne, reqTwo]);
+        const [resOne, resTwo] = await Promise.all([reqOne, reqTwo]);
+        [resOne.status, resTwo.status].should.containEql(422);
     });
 
     it('Can add a post', async function () {
