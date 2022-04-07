@@ -202,6 +202,33 @@ describe('Posts API', function () {
         localUtils.API.checkResponse(jsonResponse.posts[0].email, 'email');
     });
 
+    it('Errors on duplicate post', async function () {
+        // This error is only present when using mysql
+        if (config.get('database').client === 'sqlite3') {
+            return this.skip();
+        }
+        const post = {
+            html: '<p>Hello World</p>', 
+            status: 'draft', 
+            title: 'My Title'
+        };
+
+        const reqOne = request
+            .post(localUtils.API.getApiQuery('posts'))
+            .set('Origin', config.get('url'))
+            .query({source: 'html'})
+            .send({posts: [post]});
+
+        const reqTwo = request
+            .post(localUtils.API.getApiQuery('posts'))
+            .set('Origin', config.get('url'))
+            .query({source: 'html'})
+            .send({posts: [post]});
+            
+        const [resOne, resTwo] = await Promise.all([reqOne, reqTwo]);
+        [resOne.status, resTwo.status].should.containEql(422);
+    });
+
     it('Can add a post', async function () {
         const post = {
             title: 'My post',
