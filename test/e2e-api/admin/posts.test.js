@@ -203,6 +203,10 @@ describe('Posts API', function () {
     });
 
     it('Errors on duplicate post', async function () {
+        // This error is only present when using mysql
+        if (config.get('database').client === 'sqlite3') {
+            return this.skip();
+        }
         const post = {
             html: '<p>Hello World</p>', 
             status: 'draft', 
@@ -222,6 +226,7 @@ describe('Posts API', function () {
             .query({source: 'html'})
             .send({posts: [post]})
             .expect(422);
+            
         await Promise.all([reqOne, reqTwo]);
     });
 
